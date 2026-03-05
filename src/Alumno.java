@@ -57,7 +57,7 @@ public class Alumno {
      * @return String con toda la información del Alumno
      */
     public String toString(){
-        StringBuilder sb = new StringBuilder("El alumno {");
+        StringBuilder sb = new StringBuilder("\nEl alumno {");
         sb.append(String.format(" id: %d,", this.id));
         sb.append(String.format(" nombre: %s,", this.nombre));
         sb.append(String.format(" título FP: %s", this.tituloFP));
@@ -66,6 +66,4 @@ public class Alumno {
 
         return sb.toString();
     }
-
-
 }
