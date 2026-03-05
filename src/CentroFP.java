@@ -66,4 +66,19 @@ public class CentroFP {
         }
         return alumnoRegistrado;
     }
+
+
+    /**
+     * Recorre el array de alumnos y muestra por pantalla toda la información de los alumnos en cuyas posiciones no estén vacías
+     * @param
+     * @return nada
+     */
+    public void mostrarAlumnos(){
+        for(  int i = 0; i < MAX_ALUMNOS; i++ ){
+            if( alumnos[i] != null ){
+                alumnos.toString();
+            }
+        }
+    }
+
 }
