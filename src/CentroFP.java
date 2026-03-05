@@ -10,6 +10,7 @@ public class CentroFP {
      */
     public CentroFP(int cant_max_alumnos) {
         MAX_ALUMNOS = cant_max_alumnos;
+        alumnos = new Alumno[MAX_ALUMNOS];
     }
 
     /**
@@ -73,12 +74,18 @@ public class CentroFP {
      * @param
      * @return nada
      */
-    public void mostrarAlumnos(){
+    public String mostrarAlumnos(){
+        StringBuilder lista = new StringBuilder("\nLista de alumnos:\n");
+
         for(  int i = 0; i < MAX_ALUMNOS; i++ ){
             if( alumnos[i] != null ){
-                alumnos.toString();
+
+                alumnos[i].toString();
+                lista.append(alumnos[i].toString());
+
             }
         }
+        return lista.toString();
     }
 
     /**
