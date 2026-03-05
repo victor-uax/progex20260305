@@ -47,4 +47,23 @@ public class CentroFP {
         return posicionPrimerHuecoLibre;
     }
 
+    /**
+     * Registra un Alumno recibido en el array alumnos. Primero comprueba si hay hueco libre, en el caso de que haya busca a ese Alumno para verificar que no esté duplicado. En el caso de que no esté duplicado se registra en la posición del primer hueco libre
+     * @param alumno, el alumno entero
+     * @return true si ha podido ser registrado correctamente o false si no ha podido ser registrado
+     */
+    public boolean registrarAlumno(Alumno alumno){
+        boolean alumnoRegistrado  = false;
+        int primerHuecoLibre;
+
+        primerHuecoLibre = buscarPrimerHuecoLibre();
+
+        if( primerHuecoLibre != -1 ){
+            if( buscarAlumno(alumno.getId()) == null ){
+                alumnos[primerHuecoLibre] = alumno;
+                alumnoRegistrado = true;
+            }
+        }
+        return alumnoRegistrado;
+    }
 }
