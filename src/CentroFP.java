@@ -81,4 +81,19 @@ public class CentroFP {
         }
     }
 
+    /**
+     *Recorre el array alumnos y por cada posición que no esté vacía le suma 1 al contador de alumnos
+     * @return int cantidad de Alumno en el array alumnos
+     */
+    public int contarAlumnos(){
+        int contadorAlumnos  = 0;
+
+        for( int i = 0; i < MAX_ALUMNOS; i++ ){
+            if( alumnos[i] != null ){
+                contadorAlumnos++;
+            }
+        }
+        return contadorAlumnos;
+    }
+
 }
