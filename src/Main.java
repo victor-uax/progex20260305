@@ -1,13 +1,31 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-  // to see how IntelliJ IDEA suggests fixing it.
-  IO.println(String.format("Hello and welcome!"));
+public class Main {
+    public static void main(String[] args) {
 
-  for (int i = 1; i <= 5; i++) {
-    //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-    // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-    IO.println("i = " + i);
-  }
+        CentroFP centrofp1 = new CentroFP(20);
+
+        Alumno alumno1 = new Alumno(1,"Luca", "veterinaria", 54);
+        Alumno alumno2 = new Alumno(2,"Mario", "farmacia", 3);
+        Alumno alumno3 = new Alumno(3,"PapuGod", "DAM", 13);
+        Alumno alumno4 = new Alumno(4,"El kiko", "ADE", 87);
+        Alumno alumno5 = new Alumno(5,"Marquitos", "forestal", 90);
+        Alumno alumno6 = new Alumno(6,"Luis", "aeroespacial", 18);
+
+        System.out.println(centrofp1.registrarAlumno(alumno1));
+        System.out.println(centrofp1.registrarAlumno(alumno2));
+        System.out.println(centrofp1.registrarAlumno(alumno3));
+        System.out.println(centrofp1.registrarAlumno(alumno4));
+        System.out.println(centrofp1.registrarAlumno(alumno5));
+        System.out.println(centrofp1.registrarAlumno(alumno6));
+
+
+
+
+        System.out.print(centrofp1.mostrarAlumnos());
+
+
+        System.out.println(centrofp1.contarAlumnos());
+
+        System.out.println(centrofp1.buscarAlumno(2));
+        System.out.println(centrofp1.buscarAlumno(1241223));
+    }
 }
